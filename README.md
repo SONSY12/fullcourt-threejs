@@ -9,6 +9,15 @@ npm install
 npm run dev
 ```
 
+## macOS 앱 빌드
+
+```sh
+./macos/build-app.sh
+open FullCourt.app
+```
+
+macOS 앱은 Three.js 빌드 결과를 앱 내부에 포함하며 인터넷 연결 없이 실행됩니다.
+
 ## 조작
 
 - 방향키 또는 WASD: 이동
