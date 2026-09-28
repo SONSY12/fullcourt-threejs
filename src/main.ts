@@ -580,14 +580,14 @@ addEventListener('keydown', (event) => {
   keys.add(key);
   if (!gameRunning && event.key === 'Enter' && tutorialPanel.classList.contains('hidden')) startGame();
   if (!gameRunning) return;
-  if (key === 'j' && owner === 'player') {
+  if (key === 'x' && owner === 'player') {
     charging = true;
     charge = 0;
-    setMessage('초록 구간에서 J를 놓으세요', 10);
+    setMessage('초록 구간에서 X를 놓으세요', 10);
   }
   if (key === ' ') jumpTime = jumpTime > 0 ? jumpTime : 0.62;
   if (key === 'k' || key === 'shift') dashTime = 0.26;
-  if (key === 's' && !keys.has('arrowdown')) attemptDefense();
+  if (key === 'c') attemptDefense();
   if (key === 'z' && owner === 'player') releaseShot('player', 0.72, true);
   if (key === 'l') activateHeat();
   if (key === 'i' && owner !== 'flight') {
@@ -601,7 +601,7 @@ addEventListener('keydown', (event) => {
 addEventListener('keyup', (event) => {
   const key = event.key.toLowerCase();
   keys.delete(key);
-  if (key === 'j' && charging) {
+  if (key === 'x' && charging) {
     charging = false;
     releaseShot('player', charge);
   }
