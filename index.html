@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b12" />
+    <title>Full Court 3D</title>
+  </head>
+  <body>
+    <div id="game"></div>
+    <section id="hud" class="hidden">
+      <div class="topbar">
+        <div class="team"><span>YOU</span><strong id="player-score">0</strong></div>
+        <div class="clock"><b id="clock">1:30</b><small id="status">TIP OFF</small></div>
+        <div class="team cpu"><strong id="cpu-score">0</strong><span>CPU</span></div>
+      </div>
+      <div class="heat-wrap"><span>HEAT</span><div class="heat-track"><i id="heat-fill"></i></div><b id="heat-value">0%</b></div>
+      <div id="shot-meter" class="shot-meter hidden"><i></i><em></em></div>
+      <div id="message" class="message">센터의 공을 먼저 잡으세요</div>
+      <div class="controls">방향키/WASD 이동 · SPACE 점프 · J 슛 · S 수비 · Z 덩크 · K/SHIFT 대시 · L HEAT · I 교체</div>
+    </section>
+    <section id="menu" class="menu">
+      <div class="eyebrow">A THREE.JS BASKETBALL EXPERIENCE</div>
+      <h1>FULL<br /><span>COURT 3D</span></h1>
+      <p>90초 동안 펼쳐지는 브라우저 1대1 스트리트 농구</p>
+      <div class="difficulty">
+        <button data-level="1">EASY</button>
+        <button data-level="2" class="active">NORMAL</button>
+        <button data-level="3">HARD</button>
+      </div>
+      <button id="start" class="start">경기 시작 <kbd>ENTER</kbd></button>
+      <button id="tutorial" class="link-button">조작 방법 보기</button>
+      <div id="career" class="career">통산 0승 · 코인 0</div>
+    </section>
+    <section id="tutorial-panel" class="panel hidden">
+      <h2>첫 경기 튜토리얼</h2>
+      <div class="tutorial-grid">
+        <article><kbd>방향키 / WASD</kbd><b>이동</b><p>공을 잡고 상대 골대를 향해 움직이세요.</p></article>
+        <article><kbd>J 길게 누르기</kbd><b>타이밍 슛</b><p>게이지가 초록 구간일 때 놓으세요.</p></article>
+        <article><kbd>Z</kbd><b>덩크</b><p>공을 들고 림 가까이에서 사용하세요.</p></article>
+        <article><kbd>S</kbd><b>수비</b><p>가까이서 스틸하고 슛을 블록하세요.</p></article>
+      </div>
+      <button id="close-tutorial" class="start">확인</button>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
